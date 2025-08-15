@@ -93,7 +93,7 @@ vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -252,7 +252,14 @@ require('lazy').setup({
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
   { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... }, -- Add gruvbox theme
-
+  -- dev icons
+  { 'nvim-tree/nvim-web-devicons', opts = {} },
+  {
+    'm4xshen/hardtime.nvim',
+    lazy = false,
+    dependencies = { 'MunifTanjim/nui.nvim' },
+    opts = {},
+  },
   -- nvim neotree
   {
     'nvim-neo-tree/neo-tree.nvim',
