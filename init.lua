@@ -92,6 +92,11 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
 
+-- Set both relative and abs line numbers
+-- vim.opt.nu = true
+-- vim.opt.relativenumber = true
+-- vim.o.statuscolumn = '%s %l %r '
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -104,7 +109,11 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
+vim.o.statuscolumn = '%s %l %r'
+
+-- Atribui a função à statuscolumn
+-- vim.o.statuscolumn = '%!v:lua.format_number_columns()'
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
